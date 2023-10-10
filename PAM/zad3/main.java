@@ -49,7 +49,7 @@ public class main {
         {
             System.out.print("Podaj ZakresOd>0: ");
             System.out.print(ANSI_GREEN);
-            n = scan.nextInt();
+            ZakresOd = scan.nextInt();
         }
         System.out.print(ANSI_CYAN);
         System.out.print("\nZakres numerow do: ");
@@ -59,7 +59,7 @@ public class main {
         {
             System.out.print("Zakres Do nie moze byc mniejszy niz Zakred Od!\r\nPodaj ZakresDo>ZakresOd: ");
             System.out.print(ANSI_GREEN);
-            n = scan.nextInt();
+            ZakresDo = scan.nextInt();
         }
         int[] zliczacz = new int[ZakresDo+1];
         System.out.println(ANSI_RESET);
