@@ -1,5 +1,5 @@
+package PAM.zad5;
 import java.io.*;
-import java.util.Scanner;
 
 class pole_prostokata{
     double a,b,pole;
