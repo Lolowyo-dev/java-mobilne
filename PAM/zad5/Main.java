@@ -22,6 +22,13 @@ class pole_prostokata{
 
     public void wyswietl_wynik(){
         System.out.print("Pole prostokata o boku a = ");
+        //  %[flags][width][.precision]conversion-character
+        /*  
+            s formats strings.
+            d formats decimal integers.
+            f formats floating-point numbers.
+            t formats date/time values. 
+        */
         System.out.printf("%2.2f", a);
         System.out.print(" i boku b = ");
         System.out.printf("%2.2f", b);
