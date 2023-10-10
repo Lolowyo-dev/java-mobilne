@@ -5,8 +5,9 @@ class pole_prostokata{
     double a,b,pole;
 
     public void czytaj_dane()
-    throws IOException // Buffer reader nie moze zczytac
+    throws IOException // daje mozliwosc input/output w klasie
     {
+        // deklaracja metody zczytywania danych
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Program oblicza pole prostokata");
         System.out.print("Podaj bok a: ");
