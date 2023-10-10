@@ -7,7 +7,7 @@ public class Main {
 
         for(int i=0; i<=255; i++){
             znak = (char)i;
-            System.out.println(i+" - "+znak);
+            System.out.print(i+" - "+znak);
         }
     }
 }
