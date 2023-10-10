@@ -2,7 +2,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 
-public class main {
+public class Main {
     public static final String ANSI_BLACK_BACKGROUND = "\u001B[40m";
     public static final String ANSI_RED_BACKGROUND = "\u001B[41m";
     public static final String ANSI_GREEN_BACKGROUND = "\u001B[42m";
@@ -20,7 +20,7 @@ public class main {
     public static final String ANSI_PURPLE = "\u001B[35m";
     public static final String ANSI_CYAN = "\u001B[36m";
     public static final String ANSI_WHITE = "\u001B[38m";
-    public static void cos(String[] args) {
+    public static void main(String[] args) {
         String welcome = "\r\n" + //
                 "\t   ____                           _             \r\n" + //
                 "\t  / ___| ___ _ __   ___ _ __ __ _| |_ ___  _ __ \r\n" + //

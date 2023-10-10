@@ -1,8 +1,8 @@
 package PAM.zad4;
 
-public class main {
+public class Main {
     
-    public static void cos(String[] args){
+    public static void main(String[] args){
         char znak;
 
         System.out.println("Program wyświetla duże litery alfabetu od A do Z i od Z do A.");
