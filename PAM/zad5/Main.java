@@ -48,3 +48,5 @@ public class Main{
         pole.wyswietl_wynik();
     }
 }
+
+// modification - skożystać ze skanera
