@@ -61,18 +61,20 @@ public class main {
             System.out.print(ANSI_GREEN);
             n = scan.nextInt();
         }
-        int[] zliczacz = new int[ZakresDo-ZakresOd+1];
+        int[] zliczacz = new int[ZakresDo+1];
         System.out.println(ANSI_RESET);
         Random rand = new Random();
         for(int i = 1; i <= n; i++)
         {
         int a = rand.nextInt(ZakresDo-ZakresOd+1)+ZakresOd;
-        zliczacz[a-1]=zliczacz[a-1]+1;
+        zliczacz[a]=zliczacz[a]+1;
         System.out.println(ANSI_CYAN+"Liczba "+ANSI_RESET+ANSI_WHITE+i+ANSI_RESET+ANSI_CYAN+" wylosowana: "+ANSI_YELLOW+a+ANSI_RESET);
         }
+        Float UI;
         for (int i=ZakresOd; i <= ZakresDo; i++) {
+            UI = (float)zliczacz[i]/n*20;
             System.out.print("\n"+ANSI_CYAN+"Liczba "+ANSI_RESET+ANSI_WHITE+i+ANSI_RESET+ANSI_CYAN+" wystapila: ");
-            for (int j = 0; j < zliczacz[i-ZakresOd]; j++) {
+            for (int j = 0; j < (UI); j++) {
                 System.out.print(ANSI_YELLOW+"*"+ANSI_RESET);
             }
         }
