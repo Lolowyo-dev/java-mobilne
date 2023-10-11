@@ -1,24 +1,32 @@
 package PAM.zad5copy;
+//import scannera
 import java.util.Scanner;
 
 class pole_prostokata{
     double a,b,pole;
 
+    //funkcja zczytywania danych
+
     public void czytaj_dane()
     {
-        // deklaracja metody zczytywania danych
+        // deklaracja metody zczytywania danych scanner
         Scanner br = new Scanner(System.in);
         System.out.println("Program oblicza pole prostokata");
         System.out.print("Podaj bok a: ");
         a = br.nextDouble();
         System.out.print("Podaj bok b: ");
         b = br.nextDouble();
+        // zamykanie zczytywania danych scanner
         br.close();
     }
+
+    //funkcja liczaca pole
 
     public void przetworz_dane(){
         pole = a*b;
     }
+
+    //funkcja wyswietlajaca wynik
 
     public void wyswietl_wynik(){
         System.out.print("Pole prostokata o boku a = ");
