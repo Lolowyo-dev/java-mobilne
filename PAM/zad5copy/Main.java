@@ -1,12 +1,10 @@
 package PAM.zad5copy;
-import java.io.*;
 import java.util.Scanner;
 
 class pole_prostokata{
     double a,b,pole;
 
     public void czytaj_dane()
-    throws IOException // daje mozliwosc input/output w klasie
     {
         // deklaracja metody zczytywania danych
         Scanner br = new Scanner(System.in);
@@ -15,6 +13,7 @@ class pole_prostokata{
         a = br.nextDouble();
         System.out.print("Podaj bok b: ");
         b = br.nextDouble();
+        br.close();
     }
 
     public void przetworz_dane(){
@@ -40,7 +39,6 @@ class pole_prostokata{
 
 public class Main{
     public static void main(String[] args)
-    throws IOException
     {
         pole_prostokata pole = new pole_prostokata();
 
