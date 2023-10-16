@@ -16,5 +16,16 @@
       Akceptuję oraz przycisk Wyślij (nieaktywny). Napisz skrypt, który aktywuje
       przycisk Wyślij po zaznaczeniu pola Akceptuję.
     </h1>
+    <script>
+      $(document).ready(function () {
+        $("input").change(function () {
+          $("button").prop("disabled", false);
+        });
+      });
+    </script>
+    <main>
+      <input type="checkbox" />
+      <button disabled>Wyślij</button>
+    </main>
   </body>
 </html>
