@@ -9,6 +9,14 @@
       type="text/javascript"
       src="http://code.jquery.com/color/jquery.color-2.1.2.js"
     ></script>
+    <style>
+      .bg {
+        background-color: blue;
+      }
+      .fs {
+        font-size: 150%;
+      }
+    </style>
   </head>
   <body>
     <h1>
@@ -17,5 +25,24 @@
       Napisz skrypt, który po wciśnięciu przycisku usunie klasy CSS formatujące
       akapit.
     </h1>
+    <script>
+      $(document).ready(function () {
+        $("#bt1").on("click", function () {
+          $("p").removeClass("bg");
+        });
+        $("#bt2").on("click", function () {
+          $("p").removeClass("fs");
+        });
+      });
+    </script>
+    <main>
+      <button id="bt1">usun tło</button
+      ><button id="bt2">zmniejsz wielkosc</button>
+      <p class="bg fs">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex optio unde
+        harum explicabo dignissimos, velit est quam nemo, placeat, molestias
+        error voluptatibus sint eum enim rem similique minima expedita iste.
+      </p>
+    </main>
   </body>
 </html>
