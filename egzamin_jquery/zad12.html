@@ -19,8 +19,8 @@
     <script>
       $(document).ready(function () {
         $("input").change(function () {
-          $("button").prop("disabled", false);
-          if ("checked" == $(this)) $("button").prop("disabled", true);
+          if ($("input").checked == false) $("button").prop("disabled", false);
+          if ($("input").checked == true) $("button").prop("disabled", true);
         });
       });
     </script>
