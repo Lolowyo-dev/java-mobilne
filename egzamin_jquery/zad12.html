@@ -20,6 +20,7 @@
       $(document).ready(function () {
         $("input").change(function () {
           $("button").prop("disabled", false);
+          if ("checked" == $(this)) $("button").prop("disabled", true);
         });
       });
     </script>
