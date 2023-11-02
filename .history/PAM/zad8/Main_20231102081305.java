@@ -11,7 +11,8 @@ public class Main{
             tablica[j] = temp;
         }
 
-        tekst = new String(tablica);
-        System.out.println(tekst);
+        for(int i = 0; i < tekst.length(); i++){
+            System.out.print(tablica[i]);
+        }
     }
 }

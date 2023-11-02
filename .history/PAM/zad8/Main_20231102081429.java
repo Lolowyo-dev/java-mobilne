@@ -12,6 +12,6 @@ public class Main{
         }
 
         tekst = new String(tablica);
-        System.out.println(tekst);
+        sSystem.out.println(tekst);
     }
 }

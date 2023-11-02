@@ -8,10 +8,11 @@ public class Main{
         for(int i=0, j=tablica.length-1; i<j; i++, j--){
             char temp = tablica[i];
             tablica[i] = tablica[j];
-            tablica[j] = temp;
+            tablica[j] = temp;asdasdasdad
         }
 
-        tekst = new String(tablica);
-        System.out.println(tekst);
+        for(int i = 0; i < tekst.length(); i++){
+            System.out.print(tablica[i]);
+        }
     }
 }
