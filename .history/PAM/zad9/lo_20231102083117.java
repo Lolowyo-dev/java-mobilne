@@ -1,7 +1,7 @@
 package PAM.zad9;
 import java.util.Scanner;
 
-public class Main{
+public class lo{
     public static void main(String[] args){
         //Wczytaj z klawiatury 5 dowolnych liczb, wyswietl je a nastepnie odwroc kolejnosc w tablicy i wyswietl
         Scanner aha = new Scanner(System.in);
