@@ -2,6 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
 import java.awt.font.TextAttribute;
 import java.util.HashMap;
 import java.util.Map;
@@ -9,14 +11,11 @@ import java.util.Map;
 public class Checki extends JFrame {
     private JRadioButton kobietaRadio;
     private JRadioButton mezczyznaRadio;
-    private JCheckBox check1;
-    private JCheckBox check2;
-    private JCheckBox check3;
-    private JLabel validacja;    
+    private JLabel validacja;
 
     public Checki() {
         // Tytuł okna
-        setTitle("Formularz");
+        setTitle("Form Validation");
 
         // Ustawienie układu na GridBagLayout dla lepszego rozmieszczenia komponentów
         setLayout(new GridBagLayout());
@@ -38,21 +37,6 @@ public class Checki extends JFrame {
         mezczyznaRadio.setFont(new Font("Arial", Font.PLAIN, 20));
         mezczyznaRadio.setForeground(Color.WHITE);
         mezczyznaRadio.setOpaque(false);
-
-        check1 = new JCheckBox("Latanie");
-        check1.setFont(new Font("Arial", Font.PLAIN, 20));
-        check1.setForeground(Color.WHITE);
-        check1.setOpaque(false);
-
-        check2 = new JCheckBox("Kopanie");
-        check2.setFont(new Font("Arial", Font.PLAIN, 20));
-        check2.setForeground(Color.WHITE);
-        check2.setOpaque(false);
-
-        check3 = new JCheckBox("Spadanie");
-        check3.setFont(new Font("Arial", Font.PLAIN, 20));
-        check3.setForeground(Color.WHITE);
-        check3.setOpaque(false);
 
         // Grupa przycisków typu RadioButton
         ButtonGroup grupaPlec = new ButtonGroup();
@@ -89,30 +73,17 @@ public class Checki extends JFrame {
         //Label to pola tekstowego imie
         constraints.gridx = 0;
         constraints.gridy = 0;
-        constraints.gridwidth = 1;
+        constraints.gridwidth = 4;
+
         add(kobietaRadio, constraints);
 
-        constraints.gridx = 0;
-        constraints.gridy = 1;
+        constraints.gridx = 4;
+
         add(mezczyznaRadio, constraints);
 
-        constraints.gridx = 1;
-        constraints.gridy = 0;
-        add(check1, constraints);
-
-        constraints.gridx = 1;
-        constraints.gridy = 1;
-        add(check2, constraints);
-
-        constraints.gridx = 1;
-        constraints.gridy = 2;
-        add(check3, constraints);
-
-        
-
         constraints.gridx = 0;
-        constraints.gridy = 3;
-        constraints.gridwidth = 2;
+        constraints.gridy = 1;
+        constraints.gridwidth = 4;
         add(przycisk, constraints);
 
         //Pole błędu/sukcesu
@@ -128,31 +99,11 @@ public class Checki extends JFrame {
     // Metoda do walidacji formularza
     private void validateForm() {
         String plecText = kobietaRadio.isSelected() ? "Kobieta" : "Mężczyzna";
-        String[] hobby = new String[3];
-        String hobby_txt = "";
-
-        if(check1.isSelected())
-        hobby[0] = check1.getText();
-                
-        if(check2.isSelected())
-        hobby[1] = check2.getText();
-                
-        if(check3.isSelected())
-        hobby[2] = check3.getText();
-
-        for (String hoby : hobby) {
-            if(hoby != null)
-                hobby_txt+=hoby+" ";
-        }
-
-        if(hobby_txt == "")
-        hobby_txt = "Brak";
 
         if (!kobietaRadio.isSelected() && !mezczyznaRadio.isSelected()) {
             error_mess("Ustaw płeć.");
         } else {
-            success_mess("Formularz wysłany poprawnie !");
-            JOptionPane.showMessageDialog(getContentPane(),"Płeć: "+plecText+"\nHobby: "+hobby_txt);
+            success_mess("Formularz wysłany jako " + plecText + "!");
         }
     }
 

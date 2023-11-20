@@ -16,7 +16,7 @@ public class Checki extends JFrame {
 
     public Checki() {
         // Tytuł okna
-        setTitle("Formularz");
+        setTitle("Form Validation");
 
         // Ustawienie układu na GridBagLayout dla lepszego rozmieszczenia komponentów
         setLayout(new GridBagLayout());
@@ -93,11 +93,10 @@ public class Checki extends JFrame {
         add(kobietaRadio, constraints);
 
         constraints.gridx = 0;
-        constraints.gridy = 1;
+        constraints.gridy = 2;
         add(mezczyznaRadio, constraints);
 
         constraints.gridx = 1;
-        constraints.gridy = 0;
         add(check1, constraints);
 
         constraints.gridx = 1;
@@ -105,18 +104,18 @@ public class Checki extends JFrame {
         add(check2, constraints);
 
         constraints.gridx = 1;
-        constraints.gridy = 2;
+        constraints.gridy = 3;
         add(check3, constraints);
 
         
 
         constraints.gridx = 0;
-        constraints.gridy = 3;
+        constraints.gridy = 4;
         constraints.gridwidth = 2;
         add(przycisk, constraints);
 
         //Pole błędu/sukcesu
-        constraints.gridy = 4;
+        constraints.gridy = 5;
         add(validacja, constraints);
 
         // Rozmiar głównego okna
@@ -128,25 +127,7 @@ public class Checki extends JFrame {
     // Metoda do walidacji formularza
     private void validateForm() {
         String plecText = kobietaRadio.isSelected() ? "Kobieta" : "Mężczyzna";
-        String[] hobby = new String[3];
-        String hobby_txt = "";
-
-        if(check1.isSelected())
-        hobby[0] = check1.getText();
-                
-        if(check2.isSelected())
-        hobby[1] = check2.getText();
-                
-        if(check3.isSelected())
-        hobby[2] = check3.getText();
-
-        for (String hoby : hobby) {
-            if(hoby != null)
-                hobby_txt+=hoby+" ";
-        }
-
-        if(hobby_txt == "")
-        hobby_txt = "Brak";
+        String hobby_txt = "aha";
 
         if (!kobietaRadio.isSelected() && !mezczyznaRadio.isSelected()) {
             error_mess("Ustaw płeć.");

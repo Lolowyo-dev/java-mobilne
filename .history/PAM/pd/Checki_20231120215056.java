@@ -16,7 +16,7 @@ public class Checki extends JFrame {
 
     public Checki() {
         // Tytuł okna
-        setTitle("Formularz");
+        setTitle("Form Validation");
 
         // Ustawienie układu na GridBagLayout dla lepszego rozmieszczenia komponentów
         setLayout(new GridBagLayout());
@@ -141,12 +141,8 @@ public class Checki extends JFrame {
         hobby[2] = check3.getText();
 
         for (String hoby : hobby) {
-            if(hoby != null)
-                hobby_txt+=hoby+" ";
+            hobby_txt+=hoby;
         }
-
-        if(hobby_txt == "")
-        hobby_txt = "Brak";
 
         if (!kobietaRadio.isSelected() && !mezczyznaRadio.isSelected()) {
             error_mess("Ustaw płeć.");
