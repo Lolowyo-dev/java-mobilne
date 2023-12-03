@@ -26,18 +26,18 @@
   user-select: none;
 }
 
-#menu > a {
+#menuToggle a {
   text-decoration: none;
   color: #232323;
 
   transition: color 0.3s ease;
 }
 
-#menu > a:hover {
+#menuToggle a:hover {
   color: tomato;
 }
 
-#menuToggle > input {
+#menuToggle input {
   display: block;
   width: 40px;
   height: 32px;
@@ -53,7 +53,7 @@
   -webkit-touch-callout: none;
 }
 
-#menuToggle > span {
+#menuToggle span {
   display: block;
   width: 33px;
   height: 4px;
@@ -71,30 +71,26 @@
     background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
 
-body[data-bs-theme="light"] #menuToggle > span {
-  background: #323232;
-}
-
-#menuToggle > span:first-child {
+#menuToggle span:first-child {
   transform-origin: 0% 0%;
 }
 
-#menuToggle > span:nth-last-child(2) {
+#menuToggle span:nth-last-child(2) {
   transform-origin: 0% 100%;
 }
 
-#menuToggle > input:checked ~ span {
+#menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #232323;
 }
 
-#menuToggle > input:checked ~ span:nth-last-child(3) {
+#menuToggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-#menuToggle > input:checked ~ span:nth-last-child(2) {
+#menuToggle input:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
@@ -115,7 +111,7 @@ body[data-bs-theme="light"] #menuToggle > span {
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
-#menu > li {
+#menu li {
   padding: 10px 0;
   font-size: 22px;
 }
@@ -124,14 +120,6 @@ body[data-bs-theme="light"] #menuToggle > span {
   transform: translate(-100%, 0);
 }
 
-body[data-bs-theme="light"] .navbar {
-  color: rgb(60, 83, 60);
-}
-
-.navbar:has(#menuToggle > input:checked) {
+.navbar:has(#menuToggle input:checked) {
   color: rgb(13, 71, 13);
-}
-
-body[data-bs-theme="light"] #menu {
-  background: rgba(18, 18, 18, 0.5);
 }
