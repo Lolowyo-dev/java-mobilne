@@ -15,6 +15,10 @@ body {
   font-weight: 500;
 }
 
+body[data-bs-theme="light"] {
+  background: linear-gradient(#ebe1cf, #dbc4aa);
+}
+
 .login-box {
   position: absolute;
   top: 50%;
@@ -22,7 +26,7 @@ body {
   width: 400px;
   padding: 40px;
   transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
@@ -31,7 +35,6 @@ body {
 .login-box h2 {
   margin: 0 0 30px;
   padding: 0;
-  color: #fff;
   text-align: center;
 }
 
@@ -43,7 +46,6 @@ body {
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
-  color: #fff;
   margin-bottom: 30px;
   border: none;
   border-bottom: 1px solid #fff;
@@ -57,7 +59,6 @@ body {
   padding: 10px 0;
   font-size: 16px;
   font-family: "roboto";
-  color: #fff;
   pointer-events: none;
   transition: 0.5s;
 }
@@ -66,7 +67,6 @@ body {
 .login-box .user-box input:valid ~ label {
   top: -20px;
   left: 0;
-  color: #03e9f4;
   font-size: 12px;
 }
 
@@ -79,8 +79,6 @@ body {
 .login-box form a {
   position: relative;
   display: inline-block;
-  padding: 10px 20px;
-  color: #03e9f4;
   font-size: 16px;
   text-decoration: none;
   text-transform: uppercase;
@@ -94,10 +92,14 @@ body {
 
 .login-box a:hover {
   background: rgba(2, 230, 242, 0.2);
-  color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 1px #03e9f4, 0 0 10px #03e9f4, 0 0 15px #03e9f4,
     0 0 20px #03e9f4;
+}
+.login-box a > input {
+  background: transparent;
+  border: none;
+  padding: 0.75em 1.25em;
 }
 
 .login-box a span {
