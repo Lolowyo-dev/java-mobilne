@@ -15,8 +15,8 @@ public class Main extends Application
     {
         // tworzenie FXMLLoader 
         FXMLLoader loader = new FXMLLoader();
-        String nazwa_fxml = "aha.fxml";
-        FileInputStream fxmlStream = new FileInputStream(nazwa_fxml);
+
+        FileInputStream fxmlStream = new FileInputStream("kalk\\asdqwe.fxml");
  
         // Tworzy panel z pliku fxml
         VBox root = (VBox) loader.load(fxmlStream);
